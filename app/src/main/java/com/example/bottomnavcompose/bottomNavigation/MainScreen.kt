@@ -8,6 +8,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
+import com.example.bottomnavcompose.drawer.DrawerBody
+import com.example.bottomnavcompose.drawer.DrawerHeader
 import com.example.bottomnavcompose.topAppBar.MyTopAppBar
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
@@ -33,6 +35,10 @@ fun MainScreen() {
         },
         topBar = {
             MyTopAppBar(scope, scaffoldState)
+        },
+        drawerContent = {
+            DrawerHeader()
+            DrawerBody()
         },
         bottomBar = {
             MyBottomNavigation(navController = navController)

@@ -21,7 +21,9 @@ fun MyTopAppBar(scope: CoroutineScope, scaffoldState: ScaffoldState) {
         navigationIcon = {
             IconButton(
                 onClick = {
-
+                    scope.launch {
+                        scaffoldState.drawerState.open()
+                    }
                 }
             ) {
                 Icon(
