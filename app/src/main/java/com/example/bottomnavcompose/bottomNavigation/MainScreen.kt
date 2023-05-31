@@ -38,7 +38,7 @@ fun MainScreen() {
         },
         drawerContent = {
             DrawerHeader()
-            DrawerBody()
+            DrawerBody(scope, scaffoldState)
         },
         bottomBar = {
             MyBottomNavigation(navController = navController)
